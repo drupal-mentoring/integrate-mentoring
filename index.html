@@ -1,0 +1,1004 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Planning and executing a focused Sprint that actually addresses a
+        blocking area and helps move an Open Source Project forward</title>
+
+    <meta name="description"
+          content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"/>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/core-convo.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+  <header id="myHead" style="position: absolute;top: 0; right: 0; z-index:500; font-size: small; background-color: rgba(0,0,0,0.75)"></header>
+
+     <div class="footer">
+        <div class="branding--logo" style="position: absolute; bottom: 0em; z-index: 20;">
+          <span class="logo__image">
+            <img src="lib/image/content/logo.png" alt="DrupalCon LA 2015 logo" height="55px" />
+          </span>
+          <p class="logo__site-name">#drupalcon LA 2015</p>
+        </div>
+        <div class="session--info"  style="position: absolute; bottom: 0em; z-index: 20;">
+          <p class="session__title">
+            Planning and executing a focused Sprint
+            <span class="seperator">&nbsp;/&nbsp;</span>
+          </p>
+          <p class="session__presenter">
+            YesCT & pwolanin
+          </p>
+        </div>
+      </div>
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section data-background="images/backgrounds/LA-Speaker-bkg.jpg">
+            <img src="images/image2-9.png" height="600em" alt="Los Angeles DrupalCon 2015"/>
+            <aside class="notes">
+                [cathy]
+            </aside>
+        </section>
+        <section data-background="images/backgrounds/LA-Speaker-bkg.jpg">
+        <img src="lib/image/content/logo.png" alt="DrupalCon LA 2015 logo" />
+          <div class="title-slide">
+            <h2>Planning and executing a focused Sprint that actually addresses
+                a blocking area and helps move an Open Source Project
+                forward</h2>
+            </div>
+            <h4 class="subtitle">Core Conversations</h4>
+            <h4 class="subtitle">http://bit.ly/sprint-planning</h4>
+            <!-- look at this version: http://drupal-mentoring.github.io/d.o-new-contributors-mentors/#/1 -->
+            <aside class="notes">
+                [cathy]
+            </aside>
+        </section>
+        <section>
+            <h1>YesCT</h1>
+            <img src="images/yesct-grid.png" alt="YesCT avatar from drupal.org" />
+            <h3>Cathy Theys</h3>
+            <h4>@YesCT</h4>
+            <h4>drupal.org/u/yesct</h4>
+            <h4>BlackMesh</h4>
+            <aside class="notes">
+                [cathy]
+                <br>my job is...
+            </aside>
+        </section>
+
+        <section>
+            <h1>pwolanin</h1>
+            <img src="images/pwolanin.png" alt="pwolanin avatar" />
+            <h3>Peter Wolanin</h3>
+            <h4>drupal.org/u/pwolanin</h4>
+            <h4>Acquia</h4>
+
+            <aside class="notes">
+                [peter]
+                <br>... my contributions are mostly in my volunteer ...
+            </aside>
+        </section>
+
+        <section>
+          <div>
+            <h2>Planning and executing a focused Sprint that actually addresses
+                a blocking area and helps move an Open Source Project
+                forward</h2>
+            </div>
+            <aside class="notes">
+
+                <h3>We will discuss this in general, using getting Drupal 8
+                    released
+                    as an example</h3>
+                <ul>
+                    <li>Background: Drupal 8 release plans</li>
+                    <li>Examples of successful sprints: Ghent, New Jersey</li>
+                    <li>Planning the sprint</li>
+                    <li>What should happen at the sprint</li>
+                    <li>D8 Accelerate Program</li>
+                </ul>
+                <p>structure of the talk:
+                    <br>30 minutes presentation,
+                    <br>30 mintues discussion.
+                    <br>please write down your thoughts and questions during,
+                    <br>so you will remember them.</p>
+
+                <h3>audience</h3>
+                <ul>
+                    <li>decision makers in organizations that want to do
+                        something to help release happen faster, want to host or
+                        sponsor a sprint
+                    </li>
+                    <li>local organizers that want to do something to help
+                        release happen faster, want to know if them holding a
+                        sprint would help, and how it might be different than
+                        organizing their typical events. or thinking about
+                        adding a focused sprint to a camp.
+                    </li>
+                    <li>contributors want to know what happens at this kind of
+                        sprint, want to know if attending is something they
+                        should try and do, and what it would be like
+                    </li>
+                    <li>contributors to other free software projects who want
+                        insight into what the Drupal is doing and how it works
+                    </li>
+                    <li>organizers of past focused sprints who want to add their
+                        knowledge
+                    </li>
+                    <li>contrib maintainers who are thinking about D8 upgrade or
+                        feature sprints
+                    </li>
+                    <li>project managers who think their skills are not needed,
+                        but who could contribute to getting release to happen
+                        faster
+                    </li>
+                </ul>
+
+                <p>If you fit this audience think you will get something valuable out of the talk.</p>
+
+                <h3>Not the audience</h3>
+                <ul>
+                    <li>not-yet contributors, have heard of sprints, want to
+                        know what the big deal is about sprints
+                    </li>
+                    <li>business, sales, and marketing people who are not
+                        making the money decisions
+                    </li>
+                </ul>
+                <p>... are welcome but not might be getting what they
+                    thought they would get out of attending the talk
+                <br>Totally ok to get up and move to another talk.
+                </p>
+            </aside>
+        </section>
+
+        <section>
+            <h3>Goals for This Talk</h3>
+
+            <aside class="notes">
+                <ul>
+                    <li>Helping speople planning sprints this summer, hoping to help get
+                        D8 released or a module upgraded will know the things that will help them
+                        with their goal
+                    </li>
+                    <li>provoke conversation</li>
+                    <li>give some opinions about what makes a successful sprints
+                        that other people rarely say out loud
+                    </li>
+                    <li>collectively learn more things about what makes sprints
+                        effective from the conversation part
+                    </li>
+                    <li>Improve the long-term advancement</li>
+                    <ul>
+                        <li>contrib</li>
+                        <li>8.1.x</li>
+                    </ul>
+                </ul>
+            </aside>
+        </section>
+        <section>
+            <h1>Moving an open source project forward</h1>
+            <img src="images/Fairytale_right.png" height="200px" alt="green arrow"/>
+            <!-- http://upload.wikimedia.org/wikipedia/commons/4/41/Fairytale_right.png -->
+            <aside class="notes">
+                This is the goal
+            </aside>
+        </section>
+
+        <section>
+            <h1>Sprint</h1>
+            <aside class="notes">
+                <p>focusing for a period of time</p>
+            </aside>
+        </section>
+
+        <section data-background="images/drupalcon-8807306901_6166ee5a02_o-cropped.jpg"
+          data-state="showHeader" data-header='Photo credit: <a href="https://www.flickr.com/photos/peterlozano/8807306901/">Pedro Lozano</a>'>
+            <div class="content-box" style="margin-top: -300px">
+                <h3>DrupalCon</h3>
+            </div>
+            <aside class="notes">
+                <ul>
+                    <li>drupalcon:
+                        <br>giant,
+                        <br>small focus groups working to effect short term
+                        goals toward release,
+                        <br>*AND* large groups investing in new contributors
+                        which is important for the long term life of the project
+                    </li>
+                    <li>some things will apply there, but that is not the
+                        subject of this talk
+                    </li>
+                    <li>for info on see: the drupalcon meta 2232047 [META] Get
+                        ready for drupalcon
+                    </li>
+                    <li>for more generic info d.o/core-mentoring/sprint-planning
+                    </li>
+                </ul>
+            </aside>
+        </section>
+
+        <section data-background="images/backgrounds/IMG_20150131_160647.jpg">
+            <div class="content-box" style="margin-top: -375px">
+                <h2>Focused sprint</h2>
+            </div>
+<!--
+            <p>@todo picture from new jersey?</p>-->
+            <aside class="notes">
+                <p>A focused Sprint actually
+                    addresses a blocking area and helps move an Open Source
+                    Project forward
+                </p>
+
+                <ul>
+                    <li>this will be what our talk is about
+                    </li>
+                </ul>
+            </aside>
+        </section>
+
+        <section>
+            <h3>Background: Drupal 8 release plans</h3>
+
+            <img class="white-background-img" src="images/d8_rc_phase_600.png" alt="Release cycle diagram from https://www.drupal.org/core/release-cycle"/>
+           <!-- <div>@todo picture, maybe of the timeline/years</div> -->
+
+            <aside class="notes">
+                <ul>
+                    <li>timeline, years</li>
+                    <li>beta</li>
+                    <li>beta evaluation?</li>
+                    <li>release conditions, link to issue</li>
+                    <li>criticals</li>
+                    <li>majors</li>
+                </ul>
+
+                <p>For Drupal 8 Core this means discovering and fixing
+                    criticals.</p>
+            </aside>
+        </section>
+
+        <section>
+            <h2>
+                Things we can agree on
+            </h2>
+            <aside class="notes">
+                <p>Next we will mention some
+                   <br>Agreed basics,
+                   <br>things where there is community consensus it is a good idea,
+                   <br>non controversial things
+                </p>
+            </aside>
+        </section>
+
+        <section>
+            <section>
+                <h3>Venue</h3>
+
+                <aside class="notes">
+                    <!-- each of the next slides should be quick visuals with few
+                    words. we need to get to the point of the talk which is later.
+                    -->
+                </aside>
+            </section>
+
+
+              <section data-background="images/focussprint9300553561_dfd6dd238f_k-cropped.jpg"
+                data-state="showHeader" data-header='Photo credit: <a href="https://www.flickr.com/photos/phase2technology/9300553561/">Phase2</a> cropped <a href="https://creativecommons.org/licenses/by/2.0/">cc</a>'>
+                <div class="content-box" style="margin-top: -375px">
+                    <h3>dedicated space</h3>
+                </div>
+                  <aside class="notes">
+                      <ul>
+                          <li>(not starbucks)</li>
+                      </ul>
+                  </aside>
+              </section>
+
+              <section data-background="images/electrical-4624237772_e50e8bb197_b-cropped.jpg"
+                data-state="showHeader" data-header='Photo credit: <a href="https://www.flickr.com/photos/kalleboo/4624237772/">Karl Baron</a> cropped <a href="https://creativecommons.org/licenses/by/2.0/">cc</a>'>
+                  <div class="content-box" style="margin-top: -350px">
+                      <h3>electricity</h3>
+                  </div>
+                  <aside class="notes">
+                      <ul>
+                          <li>power strips at each table</li>
+                      </ul>
+                  </aside>
+              </section>
+
+              <section data-background="images/tables-15909344732_96123eee97_o.jpg"
+                data-state="showHeader" data-header='Photo credit: <a href="https://www.flickr.com/photos/20441752@N02/15909344732/">Kristen Pol</a> <a href="https://creativecommons.org/licenses/by/2.0/">cc</a>'>
+                  <div class="content-box" style="margin-top: -350px">
+                      <h3>tables</h3>
+                  </div>
+                  <aside class="notes">
+                      <ul>
+                          <li>tables that are for groups facing each other</li>
+                          <li>movable chairs</li>
+                      </ul>
+                  </aside>
+              </section>
+
+            <section data-background="images/drinks-6928690462_cbd6ff6b73_o-cropped.jpg"
+              data-state="showHeader" data-header='Photo credit: <a href="https://www.flickr.com/photos/phase2technology/6928690462/">Phase2</a> cropped <a href="https://creativecommons.org/licenses/by/2.0/">cc</a>'>
+                <div class="content-box" style="margin-top: -50px">
+                    <h3>drinks</h3>
+                </div>
+                  <aside class="notes">
+                      <ul>
+                          <li>drinks on site: water, coffee, tea, soda. if you have beer/alcohol, have
+                              equal quality non-alcoholic drinks
+                          </li>
+                      </ul>
+                  </aside>
+              </section>
+
+            <section data-background="images/light-13423901154_c64c4da74a_h-cropped.jpg"
+              data-state="showHeader" data-header='Photo credit: <a href="https://www.flickr.com/photos/29978062@N04/13423901154/">Tamás Szügyi</a> cropped <a href="https://creativecommons.org/licenses/by/2.0/">cc</a>'>
+                <!-- Or use https://www.flickr.com/photos/127544210@N06/15222215657/in/photostream/ -->
+                <div class="content-box" style="margin-top: 450px">
+                    <h3>natural light</h3>
+                </div>
+                  <aside class="notes">
+                      <ul>
+                          <li>natural light. Helps recover from jet lag, and maintain energy</li>
+                      </ul>
+                  </aside>
+              </section>
+
+            <section data-background="images/write-1868647409_f3bb55f2a0_o.jpg"
+                data-state="showHeader" data-header='Photo credit: <a href="https://www.flickr.com/photos/jasonchinn/1868647409/">Phase2</a> cropped <a href="https://creativecommons.org/licenses/by/2.0/">cc</a>'>
+                <div class="content-box" style="margin-top: 230px">
+                    <h3>writing boards</h3>
+                </div>
+                  <aside class="notes">
+                      <ul>
+                          <li>large writing board: chalk board, white board, flip
+                              chart, giant post-its
+                          </li>
+                          <li>collaborative whiteboarding can be the most valuable moments in a sprint</li>
+                      </ul>
+                  </aside>
+              </section>
+
+              <section data-background="images/climate-4140630256_35b2342997_b.jpg"
+                data-state="showHeader" data-header='Photo credit: <a href="https://www.flickr.com/photos/fgmarand/4140630256/">Frédéric Marand</a> <a href="https://creativecommons.org/licenses/by/2.0/">cc</a>'>
+                <div class="content-box" style="margin-top: -350px">
+                    <h3>climate control</h3>
+                </div>
+                  <aside class="notes">
+                      <ul>
+                          <li>climate control: air conditioning, windows that open
+                          </li>
+                      </ul>
+                  </aside>
+              </section>
+
+            <section data-background="images/parking-6438867933_7fa5a53119_b.jpg"
+              data-state="showHeader" data-header='Photo credit: <a href="https://www.flickr.com/photos/dno1967b/6438867933/">Daniel Oines</a> <a href="https://creativecommons.org/licenses/by/2.0/">cc</a>'>
+                <div class="content-box" style="margin-top: 350px">
+                    <h3>parking</h3>
+                </div>
+                  <aside class="notes">
+                      <ul>
+                          <li>parking</li>
+                      </ul>
+                  </aside>
+              </section>
+
+            <section data-background="images/internet-504581634_7f359893e6_o.jpg"
+              data-state="showHeader" data-header='Photo credit: <a href="https://www.flickr.com/photos/futureshape/504581634/">Alexander Baxevanis</a> <a href="https://creativecommons.org/licenses/by/2.0/">cc</a>'>
+                <div class="content-box" style="margin-top: 350px">
+                    <h3>Internet</h3>
+                </div>
+                  <aside class="notes">
+                      <p>(really the most important thing ever)</p>
+                      <ul>
+                          <li>wifi or wired</li>
+                          <li>backup wifi</li>
+                          <li>freenode</li>
+                          <li>tell DA infra (so no false positive DOS indicator)</li>
+                          <li>testbots, have someone who can start more. testing
+                              delays suck and frustrate sprinters.
+                          </li>
+                      </ul>
+                  </aside>
+              </section>
+
+            <section data-background="images/food-10006685124_0d532f0dfd_k-cropped.jpg"
+              data-state="showHeader" data-header='Photo credit: <a href="https://www.flickr.com/photos/danquah/10006685124/">Mads Danquah</a> cropped <a href="https://creativecommons.org/licenses/by/2.0/">cc</a>'>
+                <div class="content-box" style="margin-top: -350px">
+                    <h3>Food</h3>
+                </div>
+                  <aside class="notes">
+                      <ul>
+                          <li>in the venue, or venue which allows bringing food in
+                          </li>
+                          <li>deconstructed food with ingredients labeled, or vegan,
+                              vegetarian, omnivore
+                          </li>
+                          <li>meals available for other dietary restrictions (gluten
+                              free, halal, etc.)
+                          </li>
+                          <li>close to food (dinner)</li>
+                      </ul>
+                  </aside>
+              </section>
+        </section>
+
+        <section>
+            <h3>Convenience and quality matters</h3>
+            <aside class="notes">
+                <ul>
+                    <li>@todo add some words... about humans and respecting
+                        that sometimes people are not paid for their time</li>
+                </ul>
+            </aside>
+        </section>
+
+        <section data-background="images/bunnies-IMG_0754-cropped.jpg"
+          data-state="showHeader" data-header='Photo credit: xjm cropped'>
+            <div class="content-box" style="margin-top: -350px">
+                <h3>Community building</h3>
+            </div>
+            <aside class="notes">
+                <ul>
+                    <li>continuity of group between sprints</li>
+                    <li>make it fun: organize things in physical space. papers.
+                        posters. stickers.
+                    </li>
+                    <li>outings around the sprint -- dinners together, etc.
+                    </li>
+                    <li>t-shirts or more lighthearted identifiers (we've had
+                        electrical tape, aprons, leis, and even bunny ears
+                        recently) for sprint leads and participants
+                    </li>
+                    <li>chocolate or specialties from the country people are
+                        from
+                    </li>
+                    <li>build some local color into the schedule for the out of
+                        town people
+                    </li>
+                </ul>
+            </aside>
+        </section>
+
+        <section data-background>
+              <h3>Looking Back</h3>
+        </section>
+        <section data-background="#ddd">
+            <div>
+                <img src="images/montage.png" alt="Montage of logos from recents Drupal events and sprints" height="600em"/>
+            </div>
+            <aside class="notes">
+                <p>looking back at these specifc events greatly informed the
+                    content of this talk. Both of us attended the vast majority
+                    of
+                    them. </p>
+
+                <p>we know our stuff</p>
+            </aside>
+        </section>
+        <section>
+            <section>
+                <h2>Things you might not know</h2>
+                <aside class="notes"></aside>
+            </section>
+
+            <section>
+                <h3>Triggers</h3>
+                <ul>
+                    <li>person + burning interest</li>
+                    <li>maintainer aware of gaps</li>
+                    <li>funding</li>
+                </ul>
+
+                <aside class="notes">
+                    <ul>
+                        <li>Triggers for holding a sprint</li>
+                        <li>someone has a burning interest in getting a particular
+                            thing done
+                        </li>
+                        <li>maintainers, release managers aware of gaps</li>
+                        <li>existing vague, scary area, not moving forward
+                            organically
+                        </li>
+                        <li>grant or other funding: plane tickets, hotel, venue
+                            food
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Planning and Preparation is Key</h3>
+                <aside class="notes">
+                    <p>Planning is a huge part of the success of sprints.</p>
+                </aside>
+            </section>
+
+            <section>
+                <h4>identify a broad Topic and Specific Goals</h4>
+
+                <aside class="notes">
+                    <p>short term, urgent, timely</p>
+                </aside>
+            </section>
+
+            <section>
+                <h4>triage Issues Ahead of Time</h4>
+                <aside class="notes">
+                    <ul>
+                        <li>discover identifying issues</li>
+                        <li>understand the issues that you know about</li>
+                        <li>identify issues that block other work and fix them
+                            before sprint
+                        </li>
+                        <li>updating the issues</li>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <h3>Have a Committer</h3>
+                <aside class="notes">
+                    <ul>
+                        <li>advance buy-in</li>
+                        <li>during: remotely dedicated or on-site</li>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <h3>Example timeline</h3>
+                <ul>
+                  <li>week -3</li>
+                  <li>week -2</li>
+                  <li>week -1</li>
+                </ul>
+                <aside class="notes">
+                    <ul>
+                        <li>week -3</li>
+                        <ul>
+                            <li>scoping focus</li>
+                            <li>identify and invite attendees</li>
+                        </ul>
+                        <li>week -2</li>
+                        <ul>
+                            <li>2 hangouts 1-1.5 hours</li>
+                        </ul>
+                        <li>week -1</li>
+                        <ul>
+                            <li>hangout</li>
+                            <li>have initial debates</li>
+                            <li>so that the first part is not with people coming up
+                                to
+                                speed
+                            </li>
+                            <li>1-2 people domain experts already start working on
+                                issues, blockers, prerequisite, choke points
+                            </li>
+                        </ul>
+                        <li>Hours and Funding</li>
+                        <ul>
+                            <li>hours</li>
+                            <ul>
+                                <li>logistics, big idea, plans: 9 hours * 4</li>
+                                <li>actually working on issues: 10 hours * 4</li>
+                            </ul>
+                            <li>example funding</li>
+                            <ul>
+                                <li>grant</li>
+                                <li>camp (comp'd tickets, event food)</li>
+                                <li>airplane/hotel: daniel, wim, alex, jess, tim
+                                </li>
+                                <li>travelish/hotel: kalpana, matt</li>
+                                <li>peter, cathy</li>
+                            </ul>
+                        </ul>
+                    </ul>
+                </aside>
+            </section>
+
+
+        </section>
+        <section>
+            <section>
+                <h3>At the Sprint</h3>
+                <aside class="notes">
+                    <p>new section of at the sprint stuffs.</p>
+                </aside>
+            </section>
+
+            <section>
+                <h4>track key issues</h4>
+                <aside class="notes">
+                    <ul>
+                        <li>their status</li>
+                        <li>what is blocking them</li>
+                        <li>who is working on them (can be more than one person)
+                        </li>
+                        <li>what remains to be done to call the issue done</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h4>make sure updates get posted on the issue</h4>
+                <aside class="notes">
+                    <p> (patches, questions, answers, documenting conversaitons)</p>
+                    <ul>
+                        <li>during the day</li>
+                        <li>before (leaving for) dinner</li>
+                        <li>because those people's future selves (the next day) will
+                            be thankful, and also, there are other people around the
+                            world that should have access to the information in the
+                            room (sometimes they work on and review an issue) whild
+                            the on-site group is eating, taking a break, or
+                            sleeping. they cannot if updates are not posted in the
+                            canonical public place: the issue
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h4>check-ins during the day</h4>
+                <aside class="notes">
+                    <ul>
+                        <li>check-in with people during the day - what do they need
+                            to be productive
+                        </li>
+                        <li>check on the testbots</li>
+                        <li>get pictures</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h4>daily update</h4>
+                <aside class="notes">
+                    <ul>
+                        <li>makes final report much easier</li>
+                        <li>keeps attendees up to speed (even they can not know all
+                            that happens in the room each day)
+                        </li>
+                        <li>humans: celebrate success</li>
+                        <li>makes spectators excited</li>
+                        <li>a person owns doing it, done by a person with high level
+                            participation in everything, but maybe not the technical
+                            lead
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>Follow-up</h3>
+                <aside class="notes"></aside>
+            </section>
+
+            <section>
+                <h4>Communicate what happened</h4>
+                <aside class="notes">
+                    <ul>
+                        <li>sometimes required by the grant</li>
+                        <li>funded by company so they get return on investment</li>
+                        <li>enriching the community knowledge</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h4>Check on issues that got close but not committed </h4>
+                <aside class="notes">
+                    <p>negotiate the terms for rtbc/commit for them (could be a core
+                        committer, the lead of the sprint, or the project manager
+                        for the sprint)</p>
+                </aside>
+            </section>
+        </section>
+
+        <section>
+            <h3>D8 accelerate</h3>
+            <div><a href="https://www.crowdrise.com/d8accelerate">https://www.crowdrise.com/d8accelerate</a></div>
+            <aside class="notes">
+                <ul>
+                    <li>say our opinions about what is good about it</li>
+                    <li>say our opinions if we think it helps</li>
+                    <li>link to give money</li>
+                </ul>
+            </aside>
+        </section>
+        <section>
+            <section>
+                <h2>Controversial things</h2>
+            </section>
+
+            <section>
+                <h3>Initialize</h3>
+                <ul>
+                    <li>before you pick a date</li>
+                    <li>initialize (seed) the group with key people</li>
+                    <li>finalize the date base on those people</li>
+                </ul>
+                <aside class="notes">
+                    <ul>
+                        <li>closer to release more important</li>
+                        <li>make a list of you must have people</li>
+                        <li>the first people to confirm can have effect on the
+                            date of the event. make sure they will be there.
+                        </li>
+                        <li>organizer (or maybe one of the first key people
+                            confirmed) has an existing open communication
+                            channel with a committer
+                        </li>
+                        <li>there is a time period of picking the date, where
+                            the organizer is temperature test if it is possible
+                            they could come. and then there is a time where the
+                            organizers confirms people can really attend. for
+                            sure.
+                        </li>
+                        <li>publishing the names of individuals who have
+                            confirmed to attend will affect the next round of
+                            key people say they will attend
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Committer Communication</h3>
+                <ul>
+                    <li>a planner</li>
+                    <li>an attendee</li>
+                </ul>
+                <aside class="notes">
+                    <ul>
+                        <li>a person planning has an existing open communication
+                            channel with a committer
+                        </li>
+                        <li>at least one person confirmed to attend should have a
+                            history of good communication with the committer
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Ask Particular People</h3>
+                <ul>
+                    <li>ask</li>
+                    <li>say no</li>
+                </ul>
+                <aside class="notes">
+                    <ul>
+                        <li>ask particular people to attend</li>
+                        <li>do not invite distracting or difficult people with a
+                            history/pattern of disruptive behavior
+                        </li>
+                        <li>say no. it is ok to exclude people based on skill level.
+                            redirect them to another event that will be a better
+                            match for them
+                        </li>
+                        <li>2 out of 10 had experience contributing (to the project
+                            (core)) but not yet key domain specialists. further away
+                            from release, ratio can be more weighted toward people
+                            with less domain specialities, and newer contributors
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Focus Means Not Mixing in Mentoring</h3>
+                <aside class="notes">
+                    <ul>
+                        <li>provide an environment for focusing, do not mix with
+                            sprints that are focused on mentoring new people
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Participants Need to Trust the Time Will be Productive</h3>
+                <aside class="notes">
+                    <ul>
+                        <li>people being invited have to trust that the lead or
+                            organizer is not going to make a disaster of things.
+                            that the event will be comfortable, and worth the time.
+                            investing days of what might be unpaid work is a big
+                            risky investment
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Project Management</h3>
+                <aside class="notes">
+                    <ul>
+                        <li>current demands or organizing a sprint and being the on
+                            site sprint lead and documenting and following up after:
+                            put tooooooo much pressure on one person to be good at
+                            all the things
+                        </li>
+                        <li>project manager for the sprint. past successful sprints
+                            have had a key person who is both a domain expert and
+                            has project manager skills. When it is the same person,
+                            it puts more demands and stress on a person. In the same
+                            way we want experienced contributors, we need project
+                            managers with experience with core.
+                        </li>
+                        <ul>
+                            <li>what might be the cost of paying? $100*8 * number of
+                                days. plus airplane and hotel. $3200 + $600 + $120 *
+                                4 = $4300
+                            </li>
+                        </ul>
+                        <li>*moar* logistics handling by someone, the DA?</li>
+                        <li>expert logistical staffing</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3>The Human Element</h3>
+                <aside class="notes">
+                    <ul>
+                        <li>dont make volunteers bitter, burned out, and sad. we can
+                            do good for the project and do good for the people
+                        </li>
+                        <li>money can cause stress, don't be afraid to ask for sponsors</li>
+                        <li>there are things that some people think should not make a
+                            difference. but make space to recognize that they do
+                        </li>
+                        <li>allow that someone
+                            might show up at 10am and leave at 5pm and be ok with
+                            that. can't expect 20 hours/day of work
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Lingering and Continuing Tasks</h3>
+                <aside class="notes">
+                    <ul>
+                        <li>after sprint work. consensus can be formed during the
+                            sprint and work continues after. sometimes unpaid
+                        </li>
+                        <li>Sometimes this is more imprtant thant eh work of the sprint itself</li>
+                    </ul>
+                </aside>
+            </section>
+        </section>
+
+        <section>
+            <h2>Conversation ... your thoughts?</h2>
+            <aside class="notes">
+                Invite people the mic on the floor.
+                <br>Take notes, or have someone take notes.
+            </aside>
+        </section>
+
+        <section data-background="#fff8e8">
+          <img src="images/image5-15.png" alt="DrupalCon LA logo header"/>
+            <h2>Sprint: Friday</h2>
+             <div class="floating">
+                <div class="left-of-image">
+                    <p>Sprint with the Community on Friday.</p>
+                    <p>We have tasks for every skillset.</p>
+                    <p>Mentors are available for new contributors. <p>
+                    <p>An optional Friday morning workshop for first-time sprinters will help you get set up.</p>
+                    <p>Follow @drupalmentoring.</p>
+                </div>
+                <div class="right-of-text">
+                    <img src="images/sprint-mentor-image.jpg" alt="Sprinter and mentors at DrupalCon Austin" width="500px" class="boxed" />
+                    <p class="photo-credit">https://www.flickr.com/photos/amazeelabs/9965814443/in/faves-38914559@N03/</p>
+                </div>
+            </div>
+
+            <aside class="notes"></aside>
+        </section>
+
+        <section data-background="images/backgrounds/LA-Speaker-bkg.jpg">
+            <img src="lib/image/content/logo.png" alt="DrupalCon LA 2015 logo" />
+            <div class="title-slide">
+                <h2>What Did You Think?</h2>
+            </div>
+            <h4 class="subtitle-red">Evaluate this session <a href="https://events.drupal.org/losangeles2015/sessions/planning-and-executing-sprint-actually-helps-move-open-source-project">events.drupal.org/node/819</a></h4>
+            <h2>Thank you!</h2>
+            <aside class="notes"></aside>
+        </section>
+    </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                condition: function () {
+                    return !!document.querySelector('pre code');
+                },
+                callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            },
+            {src: 'plugin/zoom-js/zoom.js', async: true},
+            {src: 'plugin/notes/notes.js', async: true}
+        ]
+    });
+    Reveal.addEventListener( 'slidechanged', function( event ) {
+    // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+      if(event.currentSlide.dataset.header) {
+        myHead.innerHTML = event.currentSlide.dataset.header;
+      }
+    });
+
+</script>
+
+</body>
+</html>
