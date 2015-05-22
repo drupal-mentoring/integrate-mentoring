@@ -26,7 +26,7 @@ body {
 .reveal .titlewithbackground {
     repeat: scroll 0 0;
     background-color: #ede0c7;
-    background-position: 0 -115px;
+    background-position: 0 -172px;
 }
 
 .reveal {
@@ -71,7 +71,7 @@ body {
   color: #F3D483;
   background-color: #095f8f;
   padding: 0.2em;
-  margin-top: -50px;
+  margin-top: -250px;
   border: 0.05em solid #F3D483;
 }
 
