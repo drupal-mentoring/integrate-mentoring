@@ -23,6 +23,12 @@ body {
     color: #fff;
 }
 
+.reveal .titlewithbackground {
+    repeat: scroll 0 0;
+    background-color: #ede0c7;
+    background-position: 0 -115px;
+}
+
 .reveal {
   font-family: 'Source Sans Pro', Helvetica, sans-serif;
   font-size: 38px;
