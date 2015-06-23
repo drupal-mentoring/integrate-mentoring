@@ -68,11 +68,11 @@ body {
 
 .reveal .title-slide h2 {
   font-size: 1.6em;
-  color: #F3D483;
-  background-color: #095f8f;
+  color: #FFFFFF;
+  background-color: #000000;
   padding: 0.2em;
   margin-top: -250px;
-  border: 0.05em solid #F3D483;
+  border: 0.05em solid #FFFFFF;
 }
 
 .reveal h3 {
@@ -86,7 +86,7 @@ body {
 .reveal h4.subtitle-red {
   color: #000;
   background-color: red;
-  border: 0.05em solid #F3D483;
+  border: 0.05em solid #FFFFFF;
 }
 
 .reveal h1 {
